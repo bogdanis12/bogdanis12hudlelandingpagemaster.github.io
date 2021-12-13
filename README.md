@@ -1,3 +1,5 @@
+the right deploy is: https://goofy-pasteur-7888a1.netlify.app
+
 # Frontend Mentor - Huddle landing page with curved sections
 
 ![Header/intro section for the Huddle landing page with curved sections](./design/desktop-preview.jpg)

@@ -13,6 +13,7 @@ header {
   display: flex;
   justify-content: space-between;
   margin: 3rem;
+
   .logo {
     max-width: 40%;
     max-height: 50%;
@@ -25,10 +26,18 @@ header {
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: 3rem;
+    transition: 0.5s ease-in;
     .try-it-free {
       font-size: 1.5rem;
       align-self: center;
       color: hsl(321, 100%, 78%);
+    }
+  }
+  .try-it-free-container:hover {
+    background: hsl(321, 100%, 78%);
+    transition: 0.5s ease-out;
+    .try-it-free {
+      color: white;
     }
   }
 }
@@ -46,7 +55,10 @@ header {
   }
   .title-description {
     font-size: 2rem;
-    @med margin: 3rem;
+    @media (max-width: 1200px) {
+      margin: 3rem;
+    }
+    margin: 0 30rem;
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
   }
@@ -56,6 +68,9 @@ header {
       margin: 3rem 10rem;
     }
     @media (min-width: 1201px) {
+      margin: 10rem 50rem;
+    }
+    @media (min-width: 1650px) {
       margin: 10rem 70rem;
     }
     .get-started-for-free-container {
@@ -64,11 +79,20 @@ header {
       border-radius: 3rem;
       margin: 0 auto;
       box-shadow: 2px 2px 2px 2px rgba($color: #000000, $alpha: 0.1);
+      transition: 0.5s ease-in;
       .get-started-for-free {
         color: white;
         font-size: 1.5rem;
         font-family: "Open Sans", sans-serif;
         font-weight: 600;
+      }
+    }
+    .get-started-for-free-container:hover {
+      background: none;
+      border: 1px solid hsl(322, 100%, 66%);
+      transition: 0.5s ease-out;
+      .get-started-for-free {
+        color: black;
       }
     }
   }
@@ -165,4 +189,72 @@ header {
   background: none;
 }
 footer {
+  background: hsl(192, 100%, 9%);
+  color: white;
+  margin-top: 10rem;
+  @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  .footer-news-text {
+    margin: 5rem;
+
+    .newsletter {
+      margin-top: 8rem;
+      font-size: 2rem;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 700;
+    }
+    .newsletter-description {
+      font-size: 1.5rem;
+      font-family: "Open Sans", sans-serif;
+      font-weight: 400;
+      margin-top: 2rem;
+    }
+  }
+  .email-button {
+    .inputemail {
+      input {
+        max-width: 100%;
+        display: flex;
+        margin: 0 auto;
+        padding: 1.5rem 8rem;
+        border-radius: 0.7rem;
+        border: none;
+      }
+    }
+    .super-subscribe {
+      display: flex;
+      color: white;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      justify-content: center;
+      .subscribe-container {
+        background: hsl(322, 100%, 66%);
+        padding: 1.5rem 4rem;
+        border-radius: 0.5rem;
+        text-align: center;
+        margin: 0rem 10rem;
+        transition: 0.5s ease-in;
+        align-self: flex-end;
+        .subscribe {
+          color: white;
+          font-size: 1.5rem;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 600;
+          align-self: flex-end;
+        }
+      }
+      .subscribe-container:hover {
+        transition: 0.5s ease-out;
+        background: none;
+        border: 1px solid hsl(322, 100%, 66%);
+      }
+    }
+  }
 }
